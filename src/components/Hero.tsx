@@ -1,4 +1,4 @@
-import { Bike, Clock, Flame, MapPin, Milk } from "lucide-react"
+import { Bike, Clock, Flame, MapPin } from "lucide-react"
 import { Link } from "react-router-dom"
 import { BRAND, FEATURES, getProduct } from "../data/catalog"
 import { formatPrice } from "../lib/format"
@@ -6,9 +6,25 @@ import { whatsappBlankUrl } from "../lib/whatsapp"
 import { OpenBadge } from "./OpenBadge"
 import { Specialties } from "./Specialties"
 
+function CheeseIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path
+        d="M3.5 14.5 12 4l8.5 10.5v4.2c0 .7-.6 1.3-1.3 1.3H4.8c-.7 0-1.3-.6-1.3-1.3z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+      <circle cx="9.2" cy="14.2" r="1.15" fill="currentColor" />
+      <circle cx="13.6" cy="16.4" r="0.95" fill="currentColor" />
+      <circle cx="15.8" cy="12.6" r="0.8" fill="currentColor" />
+    </svg>
+  )
+}
+
 const FEATURE_ICONS = {
   envio: Bike,
-  queso: Milk,
+  queso: CheeseIcon,
   horno: Flame,
 } as const
 

@@ -182,8 +182,8 @@ export const SPECIALTIES = [
 
 export const FEATURES = [
   { id: "envio", title: "Envíos rápidos", text: "Solo delivery en Flor de Maroñas." },
-  { id: "queso", title: "Mucho queso", text: "Pizzas bien cargadas, como en el flyer." },
-  { id: "horno", title: "Recién del horno", text: "Salen calientes, listas para la mesa." },
+  { id: "queso", title: "Mucho queso", text: "Bien cargadas, con muzzarella de verdad." },
+  { id: "horno", title: "Recién salidas del horno", text: "Calientes, listas para la mesa." },
 ] as const
 
 export function getProduct(id: string): Product | undefined {
