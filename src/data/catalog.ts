@@ -25,8 +25,9 @@ export const PROTEINAS = ["Carne", "Pollo"] as const
 
 export const CATEGORIES: { id: CategoryId; label: string }[] = [
   { id: "pizzas", label: "Pizzas" },
-  { id: "promos", label: "Promos" },
+  { id: "hamburguesas", label: "Hamburguesas" },
   { id: "milanesas", label: "Milanesas" },
+  { id: "promos", label: "Promo" },
   { id: "extras", label: "Extras" },
 ]
 
@@ -62,7 +63,7 @@ export const PRODUCTS: Product[] = [
     description: "Medio metro de pizza, mucha muzzarella.",
     price: 295,
     category: "pizzas",
-    image: "/img/menu/metro-muzza.jpg",
+    image: "/img/menu/metro-medio-muzza.jpg",
   },
   {
     id: "metro-muzza",
@@ -78,7 +79,7 @@ export const PRODUCTS: Product[] = [
     description: "Metro de muzzarella con el gusto que elijas.",
     price: 655,
     category: "pizzas",
-    image: "/img/menu/pizzeta-jamon.jpg",
+    image: "/img/menu/metro-gusto.jpg",
     optionKind: "gusto",
   },
   {
@@ -86,26 +87,19 @@ export const PRODUCTS: Product[] = [
     name: "2 hamburguesas doble carne + fritas",
     description: "Hamburguesas caseras doble carne. Promo del día.",
     price: 420,
-    category: "promos",
-    image: "/img/menu/burger.jpg",
+    category: "hamburguesas",
+    image: "/img/menu/promo-burgers.jpg",
     featured: true,
     highlights: ["Cheddar", "Panceta", "Ketchup", "Mayonesa", "Huevo frito", "Cebolla"],
   },
   {
-    id: "promo-metro-limol",
-    name: "1 metro de muzza + 2 fainá + Limol 2 L",
-    description: "Combo para compartir: metro, fainá y refresco.",
-    price: 780,
-    category: "promos",
-    image: "/img/menu/combo.jpg",
-  },
-  {
-    id: "promo-medio-faina",
-    name: "1/2 metro de muzza + 2 fainá",
-    description: "Medio metro de muzzarella con dos fainá.",
-    price: 475,
-    category: "promos",
-    image: "/img/menu/faina.jpg",
+    id: "promo-milanesas",
+    name: "2 milanesas + fritas",
+    description: "Milanesas caseras. Elegí carne o pollo.",
+    price: 650,
+    category: "milanesas",
+    image: "/img/menu/promo-milanesas.jpg",
+    optionKind: "proteina",
   },
   {
     id: "milanesa-pan",
@@ -129,11 +123,27 @@ export const PRODUCTS: Product[] = [
   {
     id: "milanesa-napo",
     name: "Milanesa napolitana para 2 + frita y mixta",
-    description: "Napolitana para compartir. Elegí carne o pollo.",
+    description: "Napolitana para compartir, con fritas y ensalada mixta. Elegí carne o pollo.",
     price: 705,
     category: "milanesas",
     image: "/img/menu/milanesa-napo.jpg",
     optionKind: "proteina",
+  },
+  {
+    id: "promo-metro-limol",
+    name: "1 metro de muzza + 2 fainá + Limol 2 L",
+    description: "Combo para compartir: metro, fainá y refresco.",
+    price: 780,
+    category: "promos",
+    image: "/img/menu/promo-metro-limol.jpg",
+  },
+  {
+    id: "promo-medio-faina",
+    name: "1/2 metro de muzza + 2 fainá",
+    description: "Medio metro de muzzarella con dos fainá.",
+    price: 475,
+    category: "promos",
+    image: "/img/menu/promo-medio-faina.jpg",
   },
   {
     id: "faina",
@@ -142,6 +152,22 @@ export const PRODUCTS: Product[] = [
     price: 90,
     category: "extras",
     image: "/img/menu/faina.jpg",
+  },
+  {
+    id: "ensalada",
+    name: "Ensalada mixta",
+    description: "Ensalada fresca para acompañar.",
+    price: 140,
+    category: "extras",
+    image: "/img/menu/extras-ensalada.jpg",
+  },
+  {
+    id: "fritas",
+    name: "Porción de fritas",
+    description: "Papas fritas crocantes.",
+    price: 150,
+    category: "extras",
+    image: "/img/menu/extras-fritas.jpg",
   },
 ]
 
@@ -159,7 +185,7 @@ export const SPECIALTIES = [
     label: "Hamburguesas",
     detail: "Caseras, doble carne",
     image: "/img/menu/burger.jpg",
-    to: "/menu?cat=promos",
+    to: "/menu?cat=hamburguesas",
     featured: false,
   },
   {

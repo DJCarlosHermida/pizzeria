@@ -6,7 +6,7 @@ import { CATEGORIES, PRODUCTS } from "../data/catalog"
 import type { CategoryId } from "../types"
 
 function isCategory(value: string | null): value is CategoryId {
-  return value === "pizzas" || value === "promos" || value === "milanesas" || value === "extras"
+  return CATEGORIES.some((item) => item.id === value)
 }
 
 export function Menu() {

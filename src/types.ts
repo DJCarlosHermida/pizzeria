@@ -1,4 +1,4 @@
-export type CategoryId = "pizzas" | "promos" | "milanesas" | "extras"
+export type CategoryId = "pizzas" | "hamburguesas" | "milanesas" | "promos" | "extras"
 
 export type OptionKind = "gusto" | "proteina"
 

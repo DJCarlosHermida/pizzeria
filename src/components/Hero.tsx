@@ -35,7 +35,7 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <img
         src="/img/menu/pizzeta-muzza.jpg"
-        alt="Pizza de Q'Delicia con muzzarella y aceitunas"
+        alt="Pizzeta de Q'Delicia con muzzarella"
         width={1920}
         height={1080}
         className="absolute inset-0 h-full w-full object-cover"
@@ -73,13 +73,13 @@ export function Hero() {
 
         {promo && (
           <Link
-            to="/menu#promo-burgers"
+            to="/menu?cat=hamburguesas"
             className="justify-self-end overflow-hidden rounded-3xl border border-white/10 bg-card/80 shadow-2xl backdrop-blur-sm lg:max-w-md"
           >
             <div className="relative h-52">
               <img
-                src="/img/menu/burger.jpg"
-                alt="Hamburguesa completa, promo del día"
+                src={promo.image}
+                alt="Dos hamburguesas doble carne con fritas, promo del día"
                 width={1920}
                 height={1080}
                 className="h-full w-full object-cover"
