@@ -1,4 +1,4 @@
-import { Clock, MapPin, Phone } from "lucide-react"
+import { Clock, Heart, MapPin, Phone } from "lucide-react"
 import { BRAND } from "../data/catalog"
 import { whatsappBlankUrl } from "../lib/whatsapp"
 
@@ -7,11 +7,8 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-ink-2">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-3">
         <div>
-          <p className="font-display text-2xl text-cream">Q&apos;DELICIA</p>
-          <p className="mt-2 max-w-xs text-sm text-muted">{BRAND.tagline}</p>
-          <p className="mt-3 inline-flex rounded-full bg-red px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
-            Solo delivery
-          </p>
+          <p className="font-display text-2xl leading-none text-cream">Q&apos;DELICIA</p>
+          <p className="mt-1 text-[10px] font-semibold tracking-[0.28em] text-red">PIZZERÍA</p>
         </div>
         <div className="space-y-3 text-sm text-cream-2">
           <p className="flex items-start gap-2">
@@ -29,8 +26,14 @@ export function Footer() {
         </div>
         <div className="text-sm text-muted">
           <p>Pedidos por WhatsApp, armados desde esta web.</p>
-          <p className="mt-4 text-cream-2">{BRAND.tagline}</p>
         </div>
+      </div>
+      <div className="ribbon">
+        <p className="flex items-center justify-center gap-3 px-4 py-3 text-center font-display text-lg uppercase tracking-wide text-[#f0d27a] sm:text-2xl">
+          <Heart className="h-4 w-4 fill-current sm:h-5 sm:w-5" />
+          {BRAND.tagline}
+          <Heart className="h-4 w-4 fill-current sm:h-5 sm:w-5" />
+        </p>
       </div>
     </footer>
   )

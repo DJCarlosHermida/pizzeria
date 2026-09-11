@@ -48,7 +48,7 @@ export function Menu() {
           <p className="font-display text-sm tracking-[0.3em] text-red">CARTA</p>
           <h1 className="mt-1 font-display text-4xl uppercase text-cream">Menú</h1>
           <p className="mt-2 max-w-xl text-sm text-muted">
-            Precios del flyer. En pizzas con un gusto, elegí el extra antes de agregar.
+            En pizzas con un gusto, elegí el extra antes de agregar.
           </p>
         </div>
         <OpenBadge />

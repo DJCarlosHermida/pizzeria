@@ -2,7 +2,7 @@ import type { CategoryId, Product } from "../types"
 
 export const BRAND = {
   name: "Q'Delicia",
-  tagline: "¡Q'Delicia en boca de todos!",
+  tagline: "¡En boca de todos!",
   type: "Pizzería",
   zone: "Flor de Maroñas",
   hoursLabel: "Lunes a sábados · 19:00 a 00:00 hs",

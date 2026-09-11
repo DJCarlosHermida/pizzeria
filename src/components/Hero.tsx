@@ -1,4 +1,4 @@
-import { Bike, Clock, Flame, MapPin } from "lucide-react"
+import { Bike, Flame } from "lucide-react"
 import { Link } from "react-router-dom"
 import { BRAND, FEATURES, getProduct } from "../data/catalog"
 import { formatPrice } from "../lib/format"
@@ -118,23 +118,6 @@ export function HomeExtras() {
               </div>
             )
           })}
-        </div>
-      </section>
-
-      <section className="border-y border-white/10 bg-ink-2">
-        <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 sm:grid-cols-3">
-          <p className="flex items-center gap-3 text-sm text-cream-2">
-            <Clock className="h-5 w-5 text-red" />
-            {BRAND.hoursLabel}
-          </p>
-          <p className="flex items-center gap-3 text-sm text-cream-2">
-            <MapPin className="h-5 w-5 text-red" />
-            Zona de reparto: {BRAND.zone}
-          </p>
-          <p className="flex items-center gap-3 text-sm text-cream-2">
-            <Bike className="h-5 w-5 text-red" />
-            Solo delivery · Pedidos al {BRAND.phoneDisplay}
-          </p>
         </div>
       </section>
     </>
