@@ -14,7 +14,7 @@ export function buildWhatsAppMessage(
   })
 
   const total = items.reduce((sum, item) => sum + item.unitPrice * item.qty, 0)
-  const payment = form.payment === "transferencia" ? "Transferencia" : "Efectivo"
+  const payment = form.payment === "debito" ? "Débito" : "Efectivo"
 
   const header = [
     `Pedido ${BRAND.name}`,
@@ -23,7 +23,7 @@ export function buildWhatsAppMessage(
     `Dirección: ${form.address.trim()} (${BRAND.zone})`,
     `Tel: ${form.phone.trim()}`,
     `Pago: ${payment}`,
-    form.notes.trim() ? `Notas: ${form.notes.trim()}` : null,
+    form.notes.trim() ? `Información adicional: ${form.notes.trim()}` : null,
     "",
     ...lines,
     "",

@@ -52,6 +52,15 @@ body {
   outline: none;
 }
 
+.input::placeholder {
+  color: #9a9080;
+}
+
+.input option {
+  background: #0a0a0a;
+  color: #f3e6c8;
+}
+
 .input:focus {
   border-color: #e10600;
 }

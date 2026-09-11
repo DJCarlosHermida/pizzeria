@@ -27,6 +27,6 @@ export type CheckoutForm = {
   name: string
   phone: string
   address: string
-  payment: "efectivo" | "transferencia" | ""
+  payment: "efectivo" | "debito" | ""
   notes: string
 }
