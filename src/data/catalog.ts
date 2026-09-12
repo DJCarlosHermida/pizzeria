@@ -1,14 +1,14 @@
 import type { CategoryId, Product } from "../types"
 
 export const BRAND = {
-  name: "Q'Delicia",
-  tagline: "¡En boca de todos!",
+  name: "NOMBRE",
+  tagline: "SLOGAN",
   type: "Pizzería",
-  zone: "Flor de Maroñas",
+  zone: "Barrio de ejemplo",
   hoursLabel: "Lunes a sábados · 19:00 a 00:00 hs",
   deliveryOnly: true,
-  phoneDisplay: "094 430 692",
-  whatsappE164: "59894430692",
+  phoneDisplay: "091 332 854",
+  whatsappE164: "59891332854",
   timezone: "America/Montevideo",
 } as const
 
@@ -83,14 +83,40 @@ export const PRODUCTS: Product[] = [
     optionKind: "gusto",
   },
   {
-    id: "promo-burgers",
-    name: "2 hamburguesas doble carne + fritas",
-    description: "Hamburguesas caseras doble carne. Promo del día.",
-    price: 420,
+    id: "burger-simple",
+    name: "Hamburguesa simple + fritas y bebida",
+    description: "Una carne, completa, con fritas y bebida.",
+    price: 200,
     category: "hamburguesas",
-    image: "/img/menu/promo-burgers.jpg",
-    featured: true,
-    highlights: ["Cheddar", "Panceta", "Ketchup", "Mayonesa", "Huevo frito", "Cebolla"],
+    image: "/img/menu/burger-simple.jpg",
+    highlights: ["Cheddar", "Panceta", "Ketchup", "Mayonesa", "Huevo frito", "Cebolla", "Fritas", "Bebida"],
+  },
+  {
+    id: "burger-doble",
+    name: "Hamburguesa doble + fritas y bebida",
+    description: "Dos carnes, completa, con fritas y bebida.",
+    price: 250,
+    category: "hamburguesas",
+    image: "/img/menu/burger-doble.jpg",
+    highlights: ["Cheddar", "Panceta", "Ketchup", "Mayonesa", "Huevo frito", "Cebolla", "Fritas", "Bebida"],
+  },
+  {
+    id: "burger-triple",
+    name: "Hamburguesa triple + fritas y bebida",
+    description: "Tres carnes, completa, con fritas y bebida.",
+    price: 320,
+    category: "hamburguesas",
+    image: "/img/menu/burger-triple.jpg?v=2",
+    highlights: ["Cheddar", "Panceta", "Ketchup", "Mayonesa", "Huevo frito", "Cebolla", "Fritas", "Bebida"],
+  },
+  {
+    id: "burger-4-carnes",
+    name: "Hamburguesa 4 carnes + fritas y bebida",
+    description: "Cuatro carnes, completa, con fritas y bebida.",
+    price: 450,
+    category: "hamburguesas",
+    image: "/img/menu/burger-cuatro.jpg",
+    highlights: ["Cheddar", "Panceta", "Ketchup", "Mayonesa", "Huevo frito", "Cebolla", "Fritas", "Bebida"],
   },
   {
     id: "promo-milanesas",
@@ -128,6 +154,16 @@ export const PRODUCTS: Product[] = [
     category: "milanesas",
     image: "/img/menu/milanesa-napo.jpg",
     optionKind: "proteina",
+  },
+  {
+    id: "promo-burgers",
+    name: "2 hamburguesas doble carne + fritas",
+    description: "Hamburguesas caseras doble carne. Promo del día.",
+    price: 420,
+    category: "promos",
+    image: "/img/menu/promo-burgers.jpg",
+    featured: true,
+    highlights: ["Cheddar", "Panceta", "Ketchup", "Mayonesa", "Huevo frito", "Cebolla"],
   },
   {
     id: "promo-metro-limol",
@@ -183,7 +219,7 @@ export const SPECIALTIES = [
   {
     id: "burgers",
     label: "Hamburguesas",
-    detail: "Caseras, doble carne",
+    detail: "Simple, doble, triple o 4 carnes",
     image: "/img/menu/burger.jpg",
     to: "/menu?cat=hamburguesas",
     featured: false,
@@ -207,7 +243,7 @@ export const SPECIALTIES = [
 ] as const
 
 export const FEATURES = [
-  { id: "envio", title: "Envíos rápidos", text: "Solo delivery en Flor de Maroñas." },
+  { id: "envio", title: "Envíos rápidos", text: `Solo delivery en ${BRAND.zone}.` },
   { id: "queso", title: "Mucho queso", text: "Bien cargadas, con muzzarella de verdad." },
   { id: "horno", title: "Recién salidas del horno", text: "Calientes, listas para la mesa." },
 ] as const

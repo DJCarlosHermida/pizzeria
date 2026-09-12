@@ -60,7 +60,7 @@ export function Checkout() {
     if (!form.name.trim() || form.name.trim().length < 2) return "Ingresá tu nombre."
     const digits = form.phone.replace(/\D/g, "")
     if (digits.length < 8) return "Ingresá un teléfono válido."
-    if (form.address.trim().length < 8) return "Ingresá la dirección en Flor de Maroñas."
+    if (form.address.trim().length < 8) return "Ingresá la dirección de entrega."
     if (!form.payment) return "Elegí forma de pago."
     return null
   }

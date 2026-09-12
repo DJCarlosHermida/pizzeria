@@ -18,7 +18,7 @@ export function BrandMark({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
         <Pizza className={icon} strokeWidth={2.2} />
       </span>
       <span className={`font-display leading-none ${title}`}>
-        Q&apos;DELICIA
+        {BRAND.name}
         <span className="mt-0.5 block text-[10px] font-semibold tracking-[0.28em] text-red">
           PIZZERÍA
         </span>

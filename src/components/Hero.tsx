@@ -35,7 +35,7 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <img
         src="/img/menu/pizzeta-muzza.jpg"
-        alt="Pizzeta de Q'Delicia con muzzarella"
+        alt={`Pizzeta de ${BRAND.name} con muzzarella`}
         width={1920}
         height={1080}
         className="absolute inset-0 h-full w-full object-cover"
@@ -47,7 +47,7 @@ export function Hero() {
           <OpenBadge />
           <p className="mt-5 font-display text-sm tracking-[0.35em] text-red">PIZZERÍA · SOLO DELIVERY</p>
           <h1 className="mt-2 font-display text-5xl uppercase leading-[0.92] text-cream sm:text-7xl">
-            Q&apos;Delicia
+            {BRAND.name}
             <span className="mt-3 block text-2xl font-semibold normal-case tracking-normal text-cream-2 sm:text-3xl">
               {BRAND.tagline}
             </span>
@@ -73,7 +73,7 @@ export function Hero() {
 
         {promo && (
           <Link
-            to="/menu?cat=hamburguesas"
+            to="/menu?cat=promos"
             className="justify-self-end overflow-hidden rounded-3xl border border-white/10 bg-card/80 shadow-2xl backdrop-blur-sm lg:max-w-md"
           >
             <div className="relative h-52">
