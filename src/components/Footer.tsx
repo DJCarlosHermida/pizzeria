@@ -1,13 +1,7 @@
 import { Clock, Heart, MapPin, Phone } from "lucide-react"
-import { Link, NavLink, useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { BRAND, CATEGORIES } from "../data/catalog"
 import { whatsappBlankUrl } from "../lib/whatsapp"
-
-const PAGE_LINKS = [
-  { to: "/", label: "Inicio" },
-  { to: "/menu", label: "Menú" },
-  { to: "/pedido", label: "Pedido" },
-]
 
 export function Footer() {
   const location = useLocation()
@@ -38,24 +32,7 @@ export function Footer() {
         </div>
         <nav aria-label="Navegación">
           <p className="font-display text-xs tracking-[0.28em] text-red">NAVEGACIÓN</p>
-          {/* <ul className="mt-3 space-y-2">
-            {PAGE_LINKS.map((link) => (
-              <li key={link.to}>
-                <NavLink
-                  to={link.to}
-                  end={link.to === "/"}
-                  className={({ isActive }) =>
-                    `font-display text-sm uppercase tracking-wider ${
-                      isActive ? "text-cream" : "text-muted hover:text-cream"
-                    }`
-                  }
-                >
-                  {link.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul> */}
-          <ul className="mt-4 space-y-2 border-t border-white/10 pt-4">
+          <ul className="mt-3 space-y-2">
             {CATEGORIES.map((item) => (
               <li key={item.id}>
                 <Link
